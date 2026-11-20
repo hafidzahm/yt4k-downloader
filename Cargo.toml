@@ -1,0 +1,19 @@
+[package]
+name = "yt4k-downloader"
+version = "0.1.1"
+edition = "2021"
+description = "Aplikasi Windows (Rust + egui) untuk download video YouTube sampai 4K/2160p, dengan log debug teredaksi."
+license = "MIT"
+
+[dependencies]
+eframe = "=0.29.1"
+egui = "=0.29.1"
+rfd = "0.15"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+dirs = "5"
+
+[profile.release]
+strip = true
+opt-level = 3
